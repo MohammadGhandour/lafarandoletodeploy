@@ -20,10 +20,10 @@ const productsRoutes = require('./routes/productsRoutes');
 const ordersRoutes = require('./routes/ordersRoutes');
 const customersRoutes = require('./routes/customersRoutes');
 
-app.use('/users', usersRoutes);
-app.use('/products', productsRoutes);
-app.use('/orders', ordersRoutes);
-app.use('/customers', customersRoutes);
+app.use('/api/users', usersRoutes);
+app.use('/api/products', productsRoutes);
+app.use('/api/orders', ordersRoutes);
+app.use('/api/customers', customersRoutes);
 
 app.use(express.static(path.join(__dirname, '../build')));
 app.get('*', (req, res) => {
