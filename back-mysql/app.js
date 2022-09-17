@@ -11,7 +11,7 @@ app.use(cors());
 
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
-app.get('/', async (req, res) => {
+app.get('/api', async (req, res) => {
     res.status(200).json({ message: "Hello from lafarandole backend" })
 });
 
